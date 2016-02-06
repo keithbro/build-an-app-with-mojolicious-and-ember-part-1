@@ -19,7 +19,9 @@
     </section>
 
     <section class="main-content">
-      <p>This is the first part of a multi-part tutorial which will help you get started developing web applications using <a href="http://mojolicious.org">Mojolicious</a> and <a href="http://ember-cli.com">Ember-CLI</a>. Ember is a JavaScript framework for creating ambitious web applications. Ember-CLI also ships with a data-persistence library called ember-data, which can communicate with a back-end API. We can use Mojolicious, a web framework written in Perl, to serve the API for ember-data to consume. To understand why you would want to build a application with a this type of architecture, take a look at <a href="http://singlepageappbook.com/goal.html">Mixu's single page app book</a>.</p>
+      <p>This is the first part of a multi-part tutorial which will help you get started developing web applications using <a href="http://mojolicious.org">Mojolicious</a> and <a href="http://ember-cli.com">Ember-CLI</a>. Ember is a JavaScript framework for creating ambitious web applications. Ember-CLI also ships with a data-persistence library called ember-data, which can communicate with a back-end API. We can use Mojolicious, a web framework written in Perl, to serve the API for ember-data to consume.</p>
+
+<p>To understand why you would want to build a application with a this type of architecture, take a look at this page of <a href="http://singlepageappbook.com/goal.html">Mixu's single page app book</a>.</p>
 
 <h2>
 <a id="tooling" class="anchor" href="#tooling" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tooling</h2>
@@ -116,7 +118,57 @@ CORE
 <h2>
 <a id="project-setup" class="anchor" href="#project-setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Project Setup</h2>
 
-<p>Wow, that was a lot, but now we are ready to start writing some code!</p>
+<p>For our application structure, let's aim to create something along the following lines:</p>
+
+<pre><code>music-app
+|- ember
+|- mojo
+</code></pre>
+
+<p>Create the base directory and cd into it. Note, <code>$_</code> is a special parameter in bash that holds the last parameter of the previous command.</p>
+
+<pre><code>~/$ mkdir music-app &amp;&amp; cd $_
+</code></pre>
+
+<p>Now we will use the ember and mojo CLIs to generate their base application code. First, Ember:</p>
+
+<pre><code># This will take a minute or so...
+~/music-app$ ember new music-app &amp;&amp; mv $_ ember
+</code></pre>
+
+<p>Next, Mojolicous:</p>
+
+<pre><code>~/music-app$ mojo generate app MusicApp &amp;&amp; mv music_app mojo
+</code></pre>
+
+<p>To confirm it worked, list the contents of the directory.</p>
+
+<pre><code>~/music-app$ ls -p
+ember/ mojo/
+</code></pre>
+
+<h2>
+<a id="start-your-engines" class="anchor" href="#start-your-engines" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Start Your Engines</h2>
+
+<p>We haven't written any code at this point, but we should still be able to start the front-end and back-end development servers. Mojolicious ships with a development web server called <a href="http://mojolicious.org/perldoc/morbo">morbo</a>. At this point you may wish to start up a couple of terminals - one for each server.</p>
+
+<pre><code># Start the back-end...
+~/music-app$ cd mojo &amp;&amp; morbo script/music_app
+Server available at http://127.0.0.1:3000
+
+# In another terminal, start the front-end...
+~/music-app$ cd ember &amp;&amp; ember serve --proxy=http://127.0.0.1:3000
+version: 1.13.15
+Proxying to http://127.0.0.1:3000
+Livereload server on http://localhost:49152
+Serving on http://localhost:4200/
+</code></pre>
+
+<p>Note that when we started the front-end server, we proxied back-end requests to the address of the back-end server.</p>
+
+<p>To confirm everything is working as expected, navigate to http://localhost:3000 and http://localhost:4200 in your browser. You should see welcome screens for both endpoints which means your servers are running.</p>
+
+<p>Wow, that was a lot, but we now have everything in place to start writing some actual code! Next time, we will do just that.</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/keithbro/probable-carnival">Building a web application with Mojolicious and Ember-CLI.</a> is maintained by <a href="https://github.com/keithbro">keithbro</a>.</span>
