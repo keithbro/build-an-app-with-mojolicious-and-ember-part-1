@@ -29,6 +29,14 @@
 <p>First we will run through the tooling that you will need on your development machine. Feel free to skip a section if you already have that tool installed. Each section has an explanation and the recommended commands to run. The commands assume that you are using OS X and may be slightly different if using Linux, and completely different if using Windows (sorry Windows users).</p>
 
 <h3>
+<a id="homebrew" class="anchor" href="#homebrew" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Homebrew</h3>
+
+<p>A package manager for OS X. Whether you end up following this tutorial or not, <a href="http://brew.sh">Homebrew</a> is a useful tool to have on your Mac.</p>
+
+<pre><code>$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+</code></pre>
+
+<h3>
 <a id="perl-5" class="anchor" href="#perl-5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Perl 5</h3>
 
 <p>OS X comes with a system Perl 5 installation. However, since it's used for critical operating system tasks, it's best to leave that installation alone, and install Perl separately. I recommend the use of <a href="http://perlbrew.pl">Perlbrew</a> to install and manage non-system Perl installations. Once you have installed Perlbrew, install the latest stable version of Perl 5.</p>
@@ -37,10 +45,10 @@
 $ \curl -L http://install.perlbrew.pl | bash
 # *IMPORTANT* Please follow the instructions in the output on how to complete the installation.
 
-# Install the latest stable version of Perl. This will take a while, go make a cup of tea, or maybe dinner...
+# Install the latest stable version of Perl. This will take a while, go make a cup of tea...
 $ perlbrew install stable
 
-# Use the newly-installed Perl. The version will be visible in the output of the previous command.
+# Use the new installation. The version number will be visible in the output of the previous command.
 $ perlbrew use 5.22.1
 
 # Verify it worked...
