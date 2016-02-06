@@ -1,42 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta charset="UTF-8">
     <title>Building an Ember App with Perl, Mojolicious and DBIx::Class by keithbro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
-    <div id="container">
-      <div class="inner">
+    <section class="page-header">
+      <h1 class="project-name">Building an Ember App with Perl, Mojolicious and DBIx::Class</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/keithbro/probable-carnival" class="btn">View on GitHub</a>
+      <a href="https://github.com/keithbro/probable-carnival/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/keithbro/probable-carnival/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-        <header>
-          <h1>Building an Ember App with Perl, Mojolicious and DBIx::Class</h1>
-          <h2></h2>
-        </header>
-
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/keithbro/probable-carnival/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/keithbro/probable-carnival/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/keithbro/probable-carnival" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-
-        <hr>
-
-        <section id="main_content">
-          <p>This is the first part of a multi-part tutorial which will help you get started developing web application using Perl 5 and Ember.js.</p>
+    <section class="main-content">
+      <p>This is the first part of a multi-part tutorial which will help you get started developing web application using Perl 5 and Ember.js.</p>
 
 <h2>
 <a id="tooling" class="anchor" href="#tooling" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tooling</h2>
 
-<p>First we will run through the tooling that you'll need on your development machine. Each section has an explanation and the recommended commands to run. This section assumes you are using either Linux or OSX.</p>
+<p>First we will run through the tooling that you will need on your development machine. Each section has an explanation and the recommended commands to run. The recommended commands may contain version numbers which are out of date, so please check the relevant tool website to get the latest versions. It is assumed that you are using either Linux or OSX.</p>
 
 <h3>
 <a id="perl-5" class="anchor" href="#perl-5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Perl 5</h3>
@@ -73,44 +61,25 @@ $ nvm install v5.5.0
 </code></pre>
 
 <h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a id="mysql" class="anchor" href="#mysql" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MySQL</h3>
 
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
+<p>For this tutorial we will use the relational database <a href="https://www.mysql.com">MySQL</a> for our persistent storage. The installation instructions differ per operating system.</p>
 
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
+<pre><code># On OSX with Homebrew installed...
+$ brew install mysql
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+# On Ubuntu...
+$ sudo apt-get install mysql-server-5.6
+</code></pre>
 
-<h3>
-<a id="some-code" class="anchor" href="#some-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Some code</h3>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/keithbro/probable-carnival">Building an Ember App with Perl, Mojolicious and DBIx::Class</a> is maintained by <a href="https://github.com/keithbro">keithbro</a>.</span>
 
-<div class="highlight highlight-source-js"><pre><span class="pl-k">function</span>() {
-  <span class="pl-k">const</span> <span class="pl-c1">hello</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>World<span class="pl-pds">"</span></span>;
-}</pre></div>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
 
-<div class="highlight highlight-source-perl"><pre><span class="pl-k">sub</span> <span class="pl-en">hello</span> {
-  <span class="pl-k">return</span> <span class="pl-s"><span class="pl-pds">"</span>World<span class="pl-pds">"</span></span>;
-}</pre></div>
+    </section>
 
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/#mentioning-users-and-teams" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
-        </section>
-
-        <footer>
-          Building an Ember App with Perl, Mojolicious and DBIx::Class is maintained by <a href="https://github.com/keithbro">keithbro</a><br>
-          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
-    </div>
+  
   </body>
 </html>
