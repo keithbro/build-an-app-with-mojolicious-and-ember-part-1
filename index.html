@@ -12,7 +12,7 @@
   <body>
     <section class="page-header">
       <h1 class="project-name">Building a web application with Mojolicious and Ember-CLI.</h1>
-      <h2 class="project-tagline"></h2>
+      <h2 class="project-tagline">6th February 2016</h2>
       <a href="https://github.com/keithbro/probable-carnival" class="btn">View on GitHub</a>
       <a href="https://github.com/keithbro/probable-carnival/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/keithbro/probable-carnival/tarball/master" class="btn">Download .tar.gz</a>
@@ -26,7 +26,7 @@
 <h2>
 <a id="tooling" class="anchor" href="#tooling" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tooling</h2>
 
-<p>First we will run through the tooling that you will need on your development machine. Each section has an explanation and the recommended commands to run. The recommended commands may contain version numbers which are out of date, so please check the relevant tool website to get the latest versions. It is assumed that you are using OS X.</p>
+<p>First we will run through the tooling that you will need on your development machine. Feel free to skip a section if you already have that tool installed. Each section has an explanation and the recommended commands to run. The commands assume that you are using OS X and may be slightly different if using Linux, and completely different if using Windows (sorry Windows users).</p>
 
 <h3>
 <a id="perl-5" class="anchor" href="#perl-5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Perl 5</h3>
@@ -35,7 +35,7 @@
 
 <pre><code># Install perlbrew.
 $ \curl -L http://install.perlbrew.pl | bash
-# The output of this command will provide instructions on how to complete the installation. Please follow those instructions.
+# Please follow the instructions in the output on how to complete the installation.
 
 # Install the latest stable version of Perl. This will take a while, go make a cup of tea, or maybe dinner...
 $ perlbrew install stable
@@ -63,7 +63,7 @@ This is perl 5, version 22, subversion 1 (v5.22.1)...
 
 <pre><code># Install nvm...
 $ brew install nvm
-# The output of this command will provide instructions on how to complete the installation. Please follow those instructions.
+# Please follow the instructions in the output on how to complete the installation.
 
 # Install the latest stable version of Node...
 $ nvm install stable
@@ -76,14 +76,13 @@ v5.5.0
 <h3>
 <a id="mysql" class="anchor" href="#mysql" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MySQL</h3>
 
-<p>For this tutorial we will use the relational database <a href="https://www.mysql.com">MySQL</a> for our persistent storage. The installation instructions differ per operating system.</p>
+<p>For this tutorial we will use the relational database <a href="https://www.mysql.com">MySQL</a> for our persistent storage.</p>
 
-<pre><code># On OS X with Homebrew installed...
-$ brew update &amp;&amp; brew install mysql
+<pre><code>$ brew update &amp;&amp; brew install mysql
 
 # Verify it worked...
 $ mysql --version
-mysql  Ver 14.14 Distrib 5.6.21
+mysql  Ver 14.14 Distrib 5.7.11, for osx10.10 (x86_64) using  EditLine wrapper
 </code></pre>
 
 <h3>
@@ -167,7 +166,7 @@ Serving on http://localhost:4200/
 
 <p>To confirm everything is working as expected, navigate to <a href="http://localhost:3000">http://localhost:3000</a> and <a href="http://localhost:4200">http://localhost:4200</a> in your browser. You should see welcome screens for both endpoints which means your servers are running.</p>
 
-<p>Wow, that was a lot, but we now have everything in place to start writing some actual code! Next time, we will do just that.</p>
+<p>Wow, that was a lot, but we now have everything in place to start writing some actual code! In the next blog post, which is coming very soon, we will do just that.</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/keithbro/probable-carnival">Building a web application with Mojolicious and Ember-CLI.</a> is maintained by <a href="https://github.com/keithbro">keithbro</a>.</span>
