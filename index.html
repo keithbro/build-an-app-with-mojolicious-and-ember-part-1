@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Building an Ember App with Perl, Mojolicious and DBIx::Class by keithbro</title>
+    <title>Building a web application with Mojolicious and Ember-CLI. by keithbro</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -11,7 +11,7 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Building an Ember App with Perl, Mojolicious and DBIx::Class</h1>
+      <h1 class="project-name">Building a web application with Mojolicious and Ember-CLI.</h1>
       <h2 class="project-tagline"></h2>
       <a href="https://github.com/keithbro/probable-carnival" class="btn">View on GitHub</a>
       <a href="https://github.com/keithbro/probable-carnival/zipball/master" class="btn">Download .zip</a>
@@ -19,7 +19,7 @@
     </section>
 
     <section class="main-content">
-      <p>This is the first part of a multi-part tutorial which will help you get started developing web application using Perl 5 and Ember.js.</p>
+      <p>This is the first part of a multi-part tutorial which will help you get started developing web application using Mojolicious and Ember-CLI. Ember is a JavaScript framework for creating ambitious web applications. Ember-CLI also ships with a data-persistence library called ember-data, which can communicate with a back-end API. We can use Mojolicious, a web framework written in Perl, to serve the API for ember-data to consume. To understand why you would want to build a application with a this type of architecture, take a look at <a href="http://singlepageappbook.com/goal.html">Mixu's single page app book</a>.</p>
 
 <h2>
 <a id="tooling" class="anchor" href="#tooling" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tooling</h2>
@@ -29,7 +29,7 @@
 <h3>
 <a id="perl-5" class="anchor" href="#perl-5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Perl 5</h3>
 
-<p>Linux and OSX come with a system Perl 5 installation. However, since it's used for critical operating system tasks, it's best to leave it alone, and install Perl separately. I recommend the use of <a href="http://perlbrew.pl">Perlbrew</a> to install and manage non-system Perl installations. Once you have installed Perlbrew, install the latest stable version of Perl 5. Stable versions have an even number as the minor release, for example, 5.22.1 is stable, 5.23.7 is not.</p>
+<p>Linux and OSX come with a system Perl 5 installation. However, since it's used for critical operating system tasks, it's best to leave that installation alone, and install Perl separately. I recommend the use of <a href="http://perlbrew.pl">Perlbrew</a> to install and manage non-system Perl installations. Once you have installed Perlbrew, install the latest stable version of Perl 5. Stable versions have an even number as the minor release, for example, 5.22.1 is stable, 5.23.7 is not.</p>
 
 <h4>
 <a id="quick-start" class="anchor" href="#quick-start" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Quick start</h4>
@@ -53,7 +53,7 @@ $ perlbrew install 5.22.1
 <h3>
 <a id="nodejs" class="anchor" href="#nodejs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Node.js</h3>
 
-<p>Ember-CLI uses the JavaScript runtime <a href="https://nodejs.org">Node.js</a> and its accompanying package manager <a href="https://www.npmjs.com/">npm</a> to perform certain tasks like installing add-ons and starting up a development server. For Perl, we used Perlbrew to manage our Perl installations, and similarly here we will use <a href="https://github.com/creationix/nvm">nvm</a> to manage our Node installations. Install it and the latest stable version of Node.</p>
+<p>Ember-CLI uses the JavaScript runtime <a href="https://nodejs.org">Node.js</a> and its accompanying package manager <a href="https://www.npmjs.com/">npm</a> to perform certain tasks like installing add-ons and starting up a development server. For Perl, we used Perlbrew to manage our Perl installations, and similarly here we will use <a href="https://github.com/creationix/nvm">nvm</a> to manage our Node installations. Install nvm, followed by the latest stable version of Node.</p>
 
 <pre><code>$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
 
@@ -73,7 +73,7 @@ $ sudo apt-get install mysql-server-5.6
 </code></pre>
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/keithbro/probable-carnival">Building an Ember App with Perl, Mojolicious and DBIx::Class</a> is maintained by <a href="https://github.com/keithbro">keithbro</a>.</span>
+        <span class="site-footer-owner"><a href="https://github.com/keithbro/probable-carnival">Building a web application with Mojolicious and Ember-CLI.</a> is maintained by <a href="https://github.com/keithbro">keithbro</a>.</span>
 
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
