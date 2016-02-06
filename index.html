@@ -19,7 +19,7 @@
     </section>
 
     <section class="main-content">
-      <p>This is the first part of a multi-part tutorial which will help you get started developing web applications using <a href="http://mojolicious.org">Mojolicious</a> and <a href="http://ember-cli.com">Ember-CLI</a>. Ember is a JavaScript framework for creating ambitious web applications. Ember-CLI also ships with a data-persistence library called ember-data, which can communicate with a back-end API. We can use Mojolicious, a web framework written in Perl, to serve the API for ember-data to consume.</p>
+      <p>This is the first part of a multi-part tutorial which will help you get started developing web applications using <a href="http://mojolicious.org">Mojolicious</a> and <a href="http://ember-cli.com">Ember-CLI</a>. Ember is a JavaScript framework for creating ambitious web applications. Ember-CLI also ships with a data-persistence library called <a href="https://github.com/emberjs/data">ember-data</a>, which can communicate with a back-end API. We can use Mojolicious, a web framework written in Perl, to serve the API for ember-data to consume.</p>
 
 <p>To understand why you would want to build a application with a this type of architecture, take a look at this page of <a href="http://singlepageappbook.com/goal.html">Mixu's single page app book</a>.</p>
 
@@ -31,13 +31,15 @@
 <h3>
 <a id="perl-5" class="anchor" href="#perl-5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Perl 5</h3>
 
-<p>Linux and OS X come with a system Perl 5 installation. However, since it's used for critical operating system tasks, it's best to leave that installation alone, and install Perl separately. I recommend the use of <a href="http://perlbrew.pl">Perlbrew</a> to install and manage non-system Perl installations. Once you have installed Perlbrew, install the latest stable version of Perl 5. Stable versions have an even number as the minor release, for example, 5.22.1 is stable, 5.23.7 is not.</p>
+<p>Linux and OS X come with a system Perl 5 installation. However, since it's used for critical operating system tasks, it's best to leave that installation alone, and install Perl separately. I recommend the use of <a href="http://perlbrew.pl">Perlbrew</a> to install and manage non-system Perl installations. Once you have installed Perlbrew, install the latest stable version of Perl 5.</p>
 
 <pre><code># Install perlbrew...
 $ \curl -L http://install.perlbrew.pl | bash
+$ echo source ~/perl5/perlbrew/etc/bashrc &gt;&gt; ~/.bash_profile
+$ source ~/.bash_profile
 
 # Install perl...
-$ perlbrew install 5.22.1
+$ perlbrew install stable
 
 # Use the newly-installed perl...
 $ perlbrew use 5.22.1
@@ -50,7 +52,7 @@ This is perl 5, version 22, subversion 1 (v5.22.1)...
 <h3>
 <a id="cpanm" class="anchor" href="#cpanm" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>cpanm</h3>
 
-<p>For installing modules from the CPAN, the tool of choice is <a href="https://github.com/miyagawa/cpanminus">cpanm</a>. If you're using Perlbrew, you should use the built in cpanm installer.</p>
+<p>For installing modules (such as Mojolicious) from the CPAN, the tool of choice is <a href="https://github.com/miyagawa/cpanminus">cpanm</a>. If you're using Perlbrew, you should use the built in cpanm installer.</p>
 
 <pre><code>$ perlbrew install-cpanm
 </code></pre>
@@ -64,7 +66,7 @@ This is perl 5, version 22, subversion 1 (v5.22.1)...
 $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
 
 # Install Node...
-$ nvm install v5.5.0
+$ nvm install stable
 
 # Did it work?...
 $ node --version
