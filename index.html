@@ -169,17 +169,17 @@ ember/ mojo/
 <h2>
 <a id="perl-dependencies" class="anchor" href="#perl-dependencies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Perl Dependencies</h2>
 
-<p>Unlike Ember-CLI, Mojolicious does not generate anything in terms of dependency management. Our application will need some extra modules from the CPAN, so we will need some way of tracking these. We will use a special file called a "cpanfile" to list the dependencies that our application will have. At the moment, the only dependency we have is Mojolicious itself, so let's get started with that.</p>
+<p>Unlike Ember-CLI, Mojolicious does not generate anything in terms of dependency management. Our application will eventually need some extra modules from the CPAN, so we will need some way of tracking these. We will use a special file called a "cpanfile" to list the dependencies that our application will have. At the moment, the only dependency we have is Mojolicious itself, so let's get started with that.</p>
 
 <pre><code>~/music-app/mojo$ echo 'requires "Mojolicious";' &gt;&gt; cpanfile
 </code></pre>
 
-<p>In future, if we want to add other dependencies to our application, we should add it to the cpanfile and run the following command:</p>
+<p>In future, if we want to add other dependencies to our application, we should add them to the cpanfile and run the following command:</p>
 
 <pre><code>~/music-app/mojo$ cpanm --installdeps .
 </code></pre>
 
-<p>If we were run that command now, nothing will happen since we already installed Mojolicious earlier in order to generate the application structure.</p>
+<p>We can run that command now, but there is nothing new to install at this time, since we already installed Mojolicious earlier in order to generate the application structure.</p>
 
 <h2>
 <a id="start-your-engines" class="anchor" href="#start-your-engines" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Start Your Engines</h2>
