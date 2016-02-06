@@ -42,8 +42,7 @@ $ perlbrew use 5.22.1
 
 # Verify it worked...
 $ perl -v
-
-  This is perl 5, version 22, subversion 1 (v5.22.1)...
+This is perl 5, version 22, subversion 1 (v5.22.1)...
 </code></pre>
 
 <h3>
@@ -59,9 +58,15 @@ $ perl -v
 
 <p>Ember-CLI uses the JavaScript runtime <a href="https://nodejs.org">Node.js</a> and its accompanying package manager <a href="https://www.npmjs.com/">npm</a> to perform certain tasks like installing add-ons and starting up a development server. For Perl, we used Perlbrew to manage our Perl installations, and similarly here we will use <a href="https://github.com/creationix/nvm">nvm</a> to manage our Node installations. Install nvm, followed by the latest stable version of Node.</p>
 
-<pre><code>$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
+<pre><code># Install nvm...
+$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
 
+# Install Node...
 $ nvm install v5.5.0
+
+# Did it work?...
+$ node --version
+v5.5.0
 </code></pre>
 
 <h3>
@@ -74,6 +79,10 @@ $ brew update &amp;&amp; brew install mysql
 
 # On Ubuntu...
 $ sudo apt-get install mysql-server-5.6
+
+# Verify it worked...
+$ mysql --version
+mysql  Ver 14.14 Distrib 5.6.21
 </code></pre>
 
 <h3>
@@ -82,6 +91,10 @@ $ sudo apt-get install mysql-server-5.6
 <p>Now let's install Ember-CLI itself, which can accomplish many tasks including installing dependencies, starting a development server, running tests, generating code and more.</p>
 
 <pre><code>$ npm install -g ember-cli
+
+# Did it work?
+$ ember --version
+version: 1.13.15
 </code></pre>
 
 <p>The <code>-g</code> option instructs npm to install Ember-CLI globally (for the current Node version). This will allow us to run ember commands from the command line.</p>
@@ -92,6 +105,12 @@ $ sudo apt-get install mysql-server-5.6
 <p>Next we'll install Mojolicious. Again, we want to install it globally (for the current Perl version).</p>
 
 <pre><code>$ cpanm Mojolicious
+
+# Verify it worked...
+$ mojo version
+CORE
+  Perl        (v5.22.1, darwin)
+  Mojolicious (6.41, Clinking Beer Mugs)
 </code></pre>
 
 <h2>
