@@ -26,22 +26,21 @@
 <h2>
 <a id="tooling" class="anchor" href="#tooling" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tooling</h2>
 
-<p>First we will run through the tooling that you will need on your development machine. Each section has an explanation and the recommended commands to run. The recommended commands may contain version numbers which are out of date, so please check the relevant tool website to get the latest versions. It is assumed that you are using either Linux or OS X.</p>
+<p>First we will run through the tooling that you will need on your development machine. Each section has an explanation and the recommended commands to run. The recommended commands may contain version numbers which are out of date, so please check the relevant tool website to get the latest versions. It is assumed that you are using OS X.</p>
 
 <h3>
 <a id="perl-5" class="anchor" href="#perl-5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Perl 5</h3>
 
-<p>Linux and OS X come with a system Perl 5 installation. However, since it's used for critical operating system tasks, it's best to leave that installation alone, and install Perl separately. I recommend the use of <a href="http://perlbrew.pl">Perlbrew</a> to install and manage non-system Perl installations. Once you have installed Perlbrew, install the latest stable version of Perl 5.</p>
+<p>OS X comes with a system Perl 5 installation. However, since it's used for critical operating system tasks, it's best to leave that installation alone, and install Perl separately. I recommend the use of <a href="http://perlbrew.pl">Perlbrew</a> to install and manage non-system Perl installations. Once you have installed Perlbrew, install the latest stable version of Perl 5.</p>
 
-<pre><code># Install perlbrew...
+<pre><code># Install perlbrew.
 $ \curl -L http://install.perlbrew.pl | bash
-$ echo source ~/perl5/perlbrew/etc/bashrc &gt;&gt; ~/.bash_profile
-$ source ~/.bash_profile
+# The output of this command will provide instructions on how to complete the installation. Please follow those instructions.
 
-# Install perl...
+# Install the latest stable version of Perl. This will take a while, go make a cup of tea, or maybe dinner...
 $ perlbrew install stable
 
-# Use the newly-installed perl...
+# Use the newly-installed Perl. The version will be visible in the output of the previous command.
 $ perlbrew use 5.22.1
 
 # Verify it worked...
@@ -63,9 +62,10 @@ This is perl 5, version 22, subversion 1 (v5.22.1)...
 <p>Ember-CLI uses the JavaScript runtime <a href="https://nodejs.org">Node.js</a> and its accompanying package manager <a href="https://www.npmjs.com/">npm</a> to perform certain tasks like installing add-ons and starting up a development server. For Perl, we used Perlbrew to manage our Perl installations, and similarly here we will use <a href="https://github.com/creationix/nvm">nvm</a> to manage our Node installations. Install nvm, followed by the latest stable version of Node.</p>
 
 <pre><code># Install nvm...
-$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
+$ brew install nvm
+# The output of this command will provide instructions on how to complete the installation. Please follow those instructions.
 
-# Install Node...
+# Install the latest stable version of Node...
 $ nvm install stable
 
 # Did it work?...
@@ -80,9 +80,6 @@ v5.5.0
 
 <pre><code># On OS X with Homebrew installed...
 $ brew update &amp;&amp; brew install mysql
-
-# On Ubuntu...
-$ sudo apt-get install mysql-server-5.6
 
 # Verify it worked...
 $ mysql --version
