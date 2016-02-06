@@ -24,19 +24,24 @@
 <h2>
 <a id="tooling" class="anchor" href="#tooling" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tooling</h2>
 
-<p>First we will run through the tooling that you will need on your development machine. Each section has an explanation and the recommended commands to run. The recommended commands may contain version numbers which are out of date, so please check the relevant tool website to get the latest versions. It is assumed that you are using either Linux or OSX.</p>
+<p>First we will run through the tooling that you will need on your development machine. Each section has an explanation and the recommended commands to run. The recommended commands may contain version numbers which are out of date, so please check the relevant tool website to get the latest versions. It is assumed that you are using either Linux or OS X.</p>
 
 <h3>
 <a id="perl-5" class="anchor" href="#perl-5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Perl 5</h3>
 
-<p>Linux and OSX come with a system Perl 5 installation. However, since it's used for critical operating system tasks, it's best to leave that installation alone, and install Perl separately. I recommend the use of <a href="http://perlbrew.pl">Perlbrew</a> to install and manage non-system Perl installations. Once you have installed Perlbrew, install the latest stable version of Perl 5. Stable versions have an even number as the minor release, for example, 5.22.1 is stable, 5.23.7 is not.</p>
+<p>Linux and OS X come with a system Perl 5 installation. However, since it's used for critical operating system tasks, it's best to leave that installation alone, and install Perl separately. I recommend the use of <a href="http://perlbrew.pl">Perlbrew</a> to install and manage non-system Perl installations. Once you have installed Perlbrew, install the latest stable version of Perl 5. Stable versions have an even number as the minor release, for example, 5.22.1 is stable, 5.23.7 is not.</p>
 
 <h4>
 <a id="quick-start" class="anchor" href="#quick-start" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Quick start</h4>
 
-<pre><code>$ \curl -L http://install.perlbrew.pl | bash
+<pre><code># Install perlbrew...
+$ \curl -L http://install.perlbrew.pl | bash
 
+# Install perl...
 $ perlbrew install 5.22.1
+
+# Use the newly-installed perl...
+$ perlbrew use 5.22.1
 </code></pre>
 
 <h3>
@@ -65,11 +70,29 @@ $ nvm install v5.5.0
 
 <p>For this tutorial we will use the relational database <a href="https://www.mysql.com">MySQL</a> for our persistent storage. The installation instructions differ per operating system.</p>
 
-<pre><code># On OSX with Homebrew installed...
-$ brew install mysql
+<pre><code># On OS X with Homebrew installed...
+$ brew update &amp;&amp; brew install mysql
 
 # On Ubuntu...
 $ sudo apt-get install mysql-server-5.6
+</code></pre>
+
+<h3>
+<a id="ember-cli" class="anchor" href="#ember-cli" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ember-CLI</h3>
+
+<p>Now let's install Ember-CLI itself, which can accomplish many tasks including installing dependencies, starting a development server, running tests, generating code and more.</p>
+
+<pre><code>$ npm install -g ember-cli
+</code></pre>
+
+<p>The <code>-g</code> option instructs npm to install Ember-CLI globally (for the current Node version). This will allow us to run ember commands from the command line.</p>
+
+<h3>
+<a id="mojolicious" class="anchor" href="#mojolicious" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Mojolicious</h3>
+
+<p>Next we'll install Mojolicious. Again, we want to install it globally (for the current Perl version).</p>
+
+<pre><code>$ cpanm Mojolicious
 </code></pre>
 
       <footer class="site-footer">
