@@ -31,9 +31,6 @@
 
 <p>Linux and OS X come with a system Perl 5 installation. However, since it's used for critical operating system tasks, it's best to leave that installation alone, and install Perl separately. I recommend the use of <a href="http://perlbrew.pl">Perlbrew</a> to install and manage non-system Perl installations. Once you have installed Perlbrew, install the latest stable version of Perl 5. Stable versions have an even number as the minor release, for example, 5.22.1 is stable, 5.23.7 is not.</p>
 
-<h4>
-<a id="quick-start" class="anchor" href="#quick-start" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Quick start</h4>
-
 <pre><code># Install perlbrew...
 $ \curl -L http://install.perlbrew.pl | bash
 
@@ -42,15 +39,17 @@ $ perlbrew install 5.22.1
 
 # Use the newly-installed perl...
 $ perlbrew use 5.22.1
+
+# Verify it worked...
+$ perl -v
+
+  This is perl 5, version 22, subversion 1 (v5.22.1)...
 </code></pre>
 
 <h3>
 <a id="cpanm" class="anchor" href="#cpanm" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>cpanm</h3>
 
 <p>For installing modules from the CPAN, the tool of choice is <a href="https://github.com/miyagawa/cpanminus">cpanm</a>. If you're using Perlbrew, you should use the built in cpanm installer.</p>
-
-<h4>
-<a id="quick-start-1" class="anchor" href="#quick-start-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Quick start</h4>
 
 <pre><code>$ perlbrew install-cpanm
 </code></pre>
@@ -94,6 +93,11 @@ $ sudo apt-get install mysql-server-5.6
 
 <pre><code>$ cpanm Mojolicious
 </code></pre>
+
+<h2>
+<a id="project-setup" class="anchor" href="#project-setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Project Setup</h2>
+
+<p>Wow, that was a lot, but now we are ready to start writing some code!</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/keithbro/probable-carnival">Building a web application with Mojolicious and Ember-CLI.</a> is maintained by <a href="https://github.com/keithbro">keithbro</a>.</span>
